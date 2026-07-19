@@ -1,0 +1,27 @@
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>ss", vim.cmd.PackerSync)
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+vim.keymap.set("n", "<leader>m", ":!make<CR>")
+vim.keymap.set("n", ";", ":")
+vim.keymap.set("n", "<S-q>", ":wq!<CR>")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+vim.keymap.set("n", "<S-d>","daw")
+vim.keymap.set("n", "<S-c>","caw")
+
+vim.keymap.set("n", "<leader>d", vim.cmd.bd)
+vim.keymap.set("n", "<leader>n", vim.cmd.new)
+vim.keymap.set("n", "<leader>v", vim.cmd.vsplit)
+vim.keymap.set("n", "<leader>h", vim.cmd.hsplit)
+vim.keymap.set("n", "<leader>l", "<C-w>l")
+vim.keymap.set("n", "<leader>k", "<C-w>k")
+vim.keymap.set("n", "<leader>h", "<C-w>h")
+vim.keymap.set("n", "<leader>j", "<C-w>j")
+vim.keymap.set("n", "<leader>q", "<C-w>q")
+
+vim.keymap.set("n", "<C-S-l>", "<C-w>2<")
+vim.keymap.set("n", "<C-S-h>", "<C-w>2>")
+vim.keymap.set("n", "<C-j>", "<C-w>-")
+vim.keymap.set("n", "<C-k>", "<C-w>+")
