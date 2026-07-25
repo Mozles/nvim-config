@@ -25,3 +25,5 @@ vim.keymap.set("n", "<C-S-l>", "<C-w>2<")
 vim.keymap.set("n", "<C-S-h>", "<C-w>2>")
 vim.keymap.set("n", "<C-j>", "<C-w>-")
 vim.keymap.set("n", "<C-k>", "<C-w>+")
+
+vim.keymap.set("n", "<leader>k", function() vim.diagnostic.open_float() end)

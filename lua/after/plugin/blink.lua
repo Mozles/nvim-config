@@ -4,7 +4,14 @@ require("blink.cmp").setup({
         ["<C-Space>"] = {"show"},
         ["<Tab>"] = {"select_next", "fallback"},
         ["<S-Tab>"] = {"select_prev", "fallback"},
-        ["<S-Enter>"] = {"accept"},
+        ["<CR>"] = { function(cmp) 
+            if cmp.is_visible() and cmp.get_selected_item() then
+                return cmp.accept()
+            end
+            return nil
+        end,
+        "fallback",
+    },
     },
 
     completion = {
@@ -20,6 +27,6 @@ require("blink.cmp").setup({
     },
 
     fuzzy = {
-        implementation = "rust",
+        implementation = "prefer_rust",
     },
 })
