@@ -27,6 +27,12 @@ vim.lsp.config("ols", {
     root_markers = { '.git' },
 })
 
+vim.lsp.config("pylsp", {
+    cmd = { "pylsp" },
+    filetypes = { "python" },
+    root_markers = { '.git' },
+})
+
 vim.lsp.config("clangd", {
     cmd = { "clangd" },
     filetypes = { "c", "h" },
@@ -37,3 +43,4 @@ vim.lsp.config("clangd", {
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("ols")
 vim.lsp.enable("clangd")
+vim.lsp.enable("pylsp")
