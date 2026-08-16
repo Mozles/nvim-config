@@ -1,3 +1,1 @@
 require('mozles')
-require('after')
-

@@ -36,7 +36,9 @@ vim.lsp.config("pylsp", {
 vim.lsp.config("clangd", {
     cmd = { "clangd" },
     filetypes = { "c", "h" },
-    args = { "-std=c99", "-Wall", "-Wextra", "-Iinclude/**", "-I./**" },
+    settings = {
+        args = { "-std=c99", "-Wall", "-Wextra", "-Iinclude" },
+    },
     root_markers = { '.git' },
 })
 

@@ -31,5 +31,10 @@ return require('packer').startup(function(use)
           require('blink.cmp').build()
       end
   }
-
+  use {
+      "DamianVCechov/hexview.nvim",
+      config = function()
+          require("hexview").setup()
+      end
+  }
 end)
