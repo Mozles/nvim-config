@@ -13,8 +13,7 @@ vim.keymap.set("n", "<S-c>","caw")
 
 vim.keymap.set("n", "<leader>d", vim.cmd.bd)
 vim.keymap.set("n", "<leader>n", vim.cmd.new)
-vim.keymap.set("n", "<leader>v", vim.cmd.vsplit)
-vim.keymap.set("n", "<leader>h", vim.cmd.hsplit)
 
 vim.keymap.set("n", "<leader>k", function() vim.diagnostic.open_float() end)
 vim.keymap.set("n", "<leader>/", ":noh<CR>")
+

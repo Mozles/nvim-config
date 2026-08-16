@@ -2,8 +2,9 @@
 --require('mini.snippets').setup()
 --require('mini.icons').setup()
 --MiniIcons.tweak_lsp_kind()
-require('mini.pairs').setup()
+-- require('mini.pairs').setup()
 require('mini.move').setup()
+require('mini.comment').setup()
 --ocal imap_expr = function(lhs, rhs)
   --vim.keymap.set("i", lhs, rhs, { expr = true, replace_keycodes = false })
 --end

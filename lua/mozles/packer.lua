@@ -3,25 +3,18 @@ if vim.tbl_islist == nil then
 end
 vim.cmd [[packadd packer.nvim]]
 
+
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   use 'nvim-mini/mini.nvim'
   use 'tpope/vim-fugitive'
-  use { 'tpope/vim-vividchalk', as='vividchalk'}
-  use { 'srcery-colors/srcery-vim', as="srcery"}
-  use { 'miikanissi/modus-themes.nvim'}
-  use {'fneu/breezy', as='srcery',
-    config = function()
 
-    end
-  }
-  use {'bluz71/vim-moonfly-colors', as="moonfly"}
-  use {'rose-pine/neovim', as='rose-pine'}
+
   use { 'nvim-treesitter/nvim-treesitter',
   	run = ':TSUpdate'
   }
-  use { 'nvim-telescope/telescope.nvim', 
+  use { 'nvim-telescope/telescope.nvim',
 	  requires = { 'nvim-lua/plenary.nvim' }
   }
   use {
@@ -37,4 +30,14 @@ return require('packer').startup(function(use)
           require("hexview").setup()
       end
   }
+  use "cohama/lexima.vim"
+
+  --# color themes
+  use { 'tpope/vim-vividchalk', as='vividchalk'}
+  use { 'srcery-colors/srcery-vim', as="srcery"}
+  use { 'miikanissi/modus-themes.nvim'}
+  use {'fneu/breezy', as='breezy'}
+  use {'bluz71/vim-moonfly-colors', as="moonfly"}
+  use {'rose-pine/neovim', as='rose-pine'}
+  use {'iagorrr/noctishc.nvim'}
 end)

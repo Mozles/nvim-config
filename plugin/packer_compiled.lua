@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/archer/.cache/nvim/packer_hererocks/2.1.1780076327/share/lua/5.1/?.lua;/home/archer/.cache/nvim/packer_hererocks/2.1.1780076327/share/lua/5.1/?/init.lua;/home/archer/.cache/nvim/packer_hererocks/2.1.1780076327/lib/luarocks/rocks-5.1/?.lua;/home/archer/.cache/nvim/packer_hererocks/2.1.1780076327/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/archer/.cache/nvim/packer_hererocks/2.1.1780076327/lib/lua/5.1/?.so"
+local package_path_str = "/home/archer/.cache/nvim/packer_hererocks/2.1.1785763465/share/lua/5.1/?.lua;/home/archer/.cache/nvim/packer_hererocks/2.1.1785763465/share/lua/5.1/?/init.lua;/home/archer/.cache/nvim/packer_hererocks/2.1.1785763465/lib/luarocks/rocks-5.1/?.lua;/home/archer/.cache/nvim/packer_hererocks/2.1.1785763465/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/archer/.cache/nvim/packer_hererocks/2.1.1785763465/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -94,6 +94,16 @@ _G.packer_plugins = {
     path = "/home/archer/.local/share/nvim/site/pack/packer/start/mini.nvim",
     url = "https://github.com/nvim-mini/mini.nvim"
   },
+  ["modus-themes.nvim"] = {
+    loaded = true,
+    path = "/home/archer/.local/share/nvim/site/pack/packer/start/modus-themes.nvim",
+    url = "https://github.com/miikanissi/modus-themes.nvim"
+  },
+  moonfly = {
+    loaded = true,
+    path = "/home/archer/.local/share/nvim/site/pack/packer/start/moonfly",
+    url = "https://github.com/bluz71/vim-moonfly-colors"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/archer/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -110,10 +120,14 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rose-pine"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
     loaded = true,
     path = "/home/archer/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
+  },
+  srcery = {
+    loaded = true,
+    path = "/home/archer/.local/share/nvim/site/pack/packer/start/srcery",
+    url = "https://github.com/srcery-colors/srcery-vim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -124,14 +138,15 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/archer/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  vividchalk = {
+    loaded = true,
+    path = "/home/archer/.local/share/nvim/site/pack/packer/start/vividchalk",
+    url = "https://github.com/tpope/vim-vividchalk"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: rose-pine
-time([[Config for rose-pine]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
-time([[Config for rose-pine]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

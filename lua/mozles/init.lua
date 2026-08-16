@@ -28,5 +28,5 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.cmd("set clipboard+=unnamedplus")
-vim.cmd("colorscheme modus")
+vim.cmd("colorscheme noctishc")
 

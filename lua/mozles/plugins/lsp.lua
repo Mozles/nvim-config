@@ -20,18 +20,21 @@ vim.lsp.config("lua_ls", {
         },
     },
 })
+vim.lsp.enable("lua_ls")
 
 vim.lsp.config("ols", {
     cmd = { "ols" },
     filetypes = { "odin" },
     root_markers = { '.git' },
 })
+vim.lsp.enable("ols")
 
 vim.lsp.config("pylsp", {
     cmd = { "pylsp" },
     filetypes = { "python" },
     root_markers = { '.git' },
 })
+vim.lsp.enable("pylsp")
 
 vim.lsp.config("clangd", {
     cmd = { "clangd" },
@@ -41,8 +44,5 @@ vim.lsp.config("clangd", {
     },
     root_markers = { '.git' },
 })
-
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("ols")
 vim.lsp.enable("clangd")
-vim.lsp.enable("pylsp")
+
