@@ -1,5 +1,5 @@
-require("mozles.remap")
 require("mozles.packer")
+require("mozles.remap")
 
 local config_dir = vim.fn.stdpath("config") .. "/lua/mozles/plugins"
 
@@ -28,5 +28,4 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.cmd("set clipboard+=unnamedplus")
-vim.cmd("colorscheme noctishc")
 

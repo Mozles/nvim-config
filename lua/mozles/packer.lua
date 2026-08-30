@@ -1,43 +1,60 @@
 if vim.tbl_islist == nil then
     vim.tbl_islist = vim.islist
 end
-vim.cmd [[packadd packer.nvim]]
+
+local function bootstrap_pckr()
+  local pckr_path = vim.fn.stdpath("data") .. "/pckr/pckr.nvim"
+
+  if not (vim.uv or vim.loop).fs_stat(pckr_path) then
+    vim.fn.system({
+      'git',
+      'clone',
+      "--filter=blob:none",
+      'https://github.com/lewis6991/pckr.nvim',
+      pckr_path
+    })
+  end
+
+  vim.opt.rtp:prepend(pckr_path)
+end
+
+bootstrap_pckr()
+local cmd = require('pckr.loader.cmd')
+local keys = require('pckr.loader.keys')
 
 
-return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  use 'nvim-mini/mini.nvim'
-  use 'tpope/vim-fugitive'
+return require('pckr').add{
+  'nvim-mini/mini.nvim';
+  'tpope/vim-fugitive';
 
 
-  use { 'nvim-treesitter/nvim-treesitter',
+  { 'nvim-treesitter/nvim-treesitter',
   	run = ':TSUpdate'
-  }
-  use { 'nvim-telescope/telescope.nvim',
+  };
+  { 'nvim-telescope/telescope.nvim',
 	  requires = { 'nvim-lua/plenary.nvim' }
-  }
-  use {
+  };
+  {
       'saghen/blink.cmp',
       requires = {'saghen/blink.lib', 'rafamadriz/friendly-snippets'},
       build = function()
           require('blink.cmp').build()
       end
-  }
-  use {
+  };
+  {
       "DamianVCechov/hexview.nvim",
       config = function()
           require("hexview").setup()
       end
-  }
-  use "cohama/lexima.vim"
+  };
+  "cohama/lexima.vim";
 
   --# color themes
-  use { 'tpope/vim-vividchalk', as='vividchalk'}
-  use { 'srcery-colors/srcery-vim', as="srcery"}
-  use { 'miikanissi/modus-themes.nvim'}
-  use {'fneu/breezy', as='breezy'}
-  use {'bluz71/vim-moonfly-colors', as="moonfly"}
-  use {'rose-pine/neovim', as='rose-pine'}
-  use {'iagorrr/noctishc.nvim'}
-end)
+  { 'tpope/vim-vividchalk', as='vividchalk'};
+  { 'srcery-colors/srcery-vim', as="srcery"};
+  { 'miikanissi/modus-themes.nvim'};
+  {'fneu/breezy', as='breezy'};
+  {'bluz71/vim-moonfly-colors', as="moonfly"};
+  {'rose-pine/neovim', as='rose-pine'};
+  {'iagorrr/noctishc.nvim'};
+}
