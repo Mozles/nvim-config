@@ -29,3 +29,5 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.cmd("set clipboard+=unnamedplus")
 
+vim.cmd("set foldmethod=indent")
+vim.cmd("set foldlevel=99")
