@@ -30,7 +30,7 @@ vim.lsp.config("ols", {
 vim.lsp.enable("ols")
 
 vim.lsp.config("pylsp", {
-    cmd = { "pylsp" },
+    cmd = { "/usr/bin/pylsp" },
     filetypes = { "python" },
     root_markers = { '.git' },
 })
