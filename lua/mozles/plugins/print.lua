@@ -14,7 +14,3 @@ print("Every print command after this point will be written here")
 function ShowPrintBuffer()
        vim.api.nvim_open_win(PrintBuffer, true, {split="right", width=40})
 end
-
-vim.keymap.set("n", "<leader>fp", function()
-    ShowPrintBuffer()
-end)

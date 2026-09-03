@@ -16,6 +16,10 @@ vim.keymap.set("n", "<leader>n", vim.cmd.new)
 vim.keymap.set("n", "<leader>k", function() vim.diagnostic.open_float() end)
 vim.keymap.set("n", "<leader>/", ":noh<CR>")
 
-vim.keymap.set("n", "<leader>s", function() 
-	ScratchPad() 
+vim.keymap.set("n", "<leader>s", function()
+	ScratchPad()
+end)
+
+vim.keymap.set("n", "<leader>fp", function()
+	ShowPrintBuffer()
 end)

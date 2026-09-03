@@ -23,3 +23,4 @@ vim.api.nvim_create_autocmd({'WinLeave'}, {
             vim.api.nvim_win_hide(winid)
         end
     end})
+
