@@ -1,6 +1,5 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>ss", vim.cmd.PackerSync)
 vim.keymap.set("n", "<leader>gg", vim.cmd.Git)
 vim.keymap.set("n", "<leader>m", ":!make -B<CR>")
 vim.keymap.set("n", ";", ":")
