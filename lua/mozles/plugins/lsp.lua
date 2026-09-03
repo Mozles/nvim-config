@@ -38,7 +38,7 @@ vim.lsp.enable("pylsp")
 
 vim.lsp.config("clangd", {
     cmd = { "clangd" },
-    filetypes = { "c", "h" },
+    filetypes = { "c", "cpp" },
     settings = {
         args = { "-std=c99", "-Wall", "-Wextra", "-Iinclude" },
     },
