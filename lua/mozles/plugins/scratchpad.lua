@@ -1,6 +1,6 @@
 
-local bufid = -1
-local winid = -1
+bufid = -1
+winid = -1
 
 function ScratchPad()
     if vim.api.nvim_win_is_valid(winid) then
@@ -15,3 +15,9 @@ function ScratchPad()
         vim.cmd(string.format("set syntax=%s", filetype))
     end
 end
+vim.api.nvim_create_autocmd({'WinLeave'}, {
+    callback = function()
+        if vim.api.nvim_get_current_win() == winid then
+            vim.api.nvim_win_hide(winid)
+        end
+    end})
