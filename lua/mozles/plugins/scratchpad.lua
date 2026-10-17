@@ -10,9 +10,11 @@ function ScratchPad()
         if not vim.api.nvim_buf_is_valid(bufid) then
             bufid = vim.api.nvim_create_buf(false, true)
         end
+        vim.bo[bufid].syntax = filetype
+        vim.bo[bufid].filetype = filetype
         winid = vim.api.nvim_open_win(bufid, true, {relative='cursor', row=1, col=0,
            width=50, height=15, style='minimal', border='single', title='scratchpad'})
-        vim.bo[bufid].syntax = filetype
+
         print(string.format("buffer id: %d window id: %d", bufid, winid))
     end
 end

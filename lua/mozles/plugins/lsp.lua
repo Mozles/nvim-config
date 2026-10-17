@@ -38,11 +38,11 @@ vim.lsp.enable("pylsp")
 
 vim.lsp.config("clangd", {
     cmd = { "clangd" },
-    filetypes = { "c", "cpp" },
+    filetypes = { "c", "cpp"},
     settings = {
-        args = { "-std=c99", "-Wall", "-Wextra", "-Iinclude" },
+        args = { "-Wall", "-Wextra", "-Iinclude" },
     },
     root_markers = { '.git' },
 })
-vim.lsp.enable("clangd")
 
+vim.lsp.enable("clangd")

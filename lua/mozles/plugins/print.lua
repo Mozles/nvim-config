@@ -6,6 +6,7 @@ _G.print = function(...)
     local args = { ... }
     local msg = table.concat(vim.tbl_map(tostring, args), "\t")
     vim.api.nvim_buf_set_lines(PrintBuffer, i, i, false, { msg })
+    original(msg)
 end
 
 print(string.format("Print log buffer created at %d", PrintBuffer))
