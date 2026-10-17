@@ -48,6 +48,14 @@ return require('pckr').add{
       end
   };
   "cohama/lexima.vim";
+  {"simonwinther/cppman.nvim",
+    cmd = "cppman",
+    opts = {
+        pricker = {
+            provider = "telescope"
+        },
+    },
+  };
 
   --# color themes
   { 'tpope/vim-vividchalk', as='vividchalk'};

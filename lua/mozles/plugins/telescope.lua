@@ -5,6 +5,9 @@ vim.keymap.set('n', '<leader>fm', function()
     builtin.man_pages({sections = {'1','2','3','4','5', '7'}})
 end) 
 
+vim.keymap.set('n', '<leader>fc', function()
+    require('cppman').search()
+end)
 
 vim.keymap.set('n', '<leader>fs', builtin.lsp_workspace_symbols, {})
 vim.keymap.set('n', '<leader>fd', builtin.lsp_document_symbols, {})
